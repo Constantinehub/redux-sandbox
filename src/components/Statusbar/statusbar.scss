@@ -1,0 +1,12 @@
+@import 'src/styles/variables';
+
+.statusbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: white;
+
+  .status_right {
+    margin-left: auto;
+  }
+}

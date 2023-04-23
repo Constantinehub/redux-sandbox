@@ -1,0 +1,19 @@
+@import 'src/styles/variables';
+
+.searchbar {
+  position: relative;
+  //margin-top: 1rem;
+  width: 100%;
+  //max-width: 20rem;
+
+  display: flex;
+
+  .search-field {
+    width: 100%;
+    background-color: white;
+  }
+
+  .search-button {
+    margin-left: 1rem;
+  }
+}
