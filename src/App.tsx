@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AppContent from './routes/AppContent/AppContent'
+import Sidebar from './components/Sidebar/Sidebar'
+import Statusbar from './components/Statusbar/Statusbar'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import './App.scss'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const lightTheme = createTheme({
+        palette: {
+            mode: 'light',
+        }
+    })
+
+    return (
+        <ThemeProvider theme={lightTheme}>
+            <div className="app">
+                <div className="app-container">
+                    <Sidebar />
+                    <div className="content">
+                        <Statusbar />
+                        <AppContent />
+                    </div>
+                </div>
+            </div>
+        </ThemeProvider>
+    )
 }
 
 export default App;

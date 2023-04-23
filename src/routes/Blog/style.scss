@@ -1,0 +1,17 @@
+@import 'src/styles/variables';
+
+.blog {
+  .articles-container {
+    display: grid;
+    //grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: repeat(3, 2fr);
+    grid-auto-rows: minmax(500px, auto);
+
+    .blog-item {
+      padding: 0.5rem;
+      border-radius: 8px;
+      outline: 1px solid red;
+      background-color: white;
+    }
+  }
+}
