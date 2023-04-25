@@ -1,0 +1,7 @@
+@function composeFontFamily($incomingFont) {
+  @return $incomingFont + ', Helvetica', 'Arial', 'sans-serif';
+}
+
+$roboto: composeFontFamily('Roboto');
+$comforta: composeFontFamily('Comfortaa');
+
