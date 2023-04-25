@@ -1,3 +1,51 @@
 @import 'src/styles/variables';
 
+.nf-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
 
+  .nf-container {
+    width: 100%;
+    margin-top: 20%;
+
+    .nf-main {
+      height: 450px;
+      width: 100%;
+      background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+      background-position: bottom 100% center;
+      background-repeat: no-repeat;
+
+      h1 {
+        margin: 0;
+        font-size: 12rem;
+        font-weight: 600;
+        font-family: $roboto;
+        text-align: center;
+        transform: translateY(-50%);
+
+        &:before {
+          content: '#';
+        }
+
+        &:after {
+          content: '...';
+        }
+      }
+    }
+
+    .nf-content {
+      text-align: center;
+
+      .nf-primary-text {
+        margin: 15px 0;
+        font-size: 2.2rem;
+      }
+
+      .nf-secondary-text {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
