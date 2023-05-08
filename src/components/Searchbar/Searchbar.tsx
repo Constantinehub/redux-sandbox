@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { debounce } from 'lodash'
 import { TextField, IconButton, Button } from '@mui/material'
+import { useIntl } from 'react-intl'
 import SearchIcon from '@mui/icons-material/Search'
 import ClearIcon from '@mui/icons-material/Clear'
 
@@ -13,6 +14,7 @@ type SearchbarProps = {
 
 const Searchbar = (props: SearchbarProps) => {
     const { onChange, onSubmit } = props
+    const { formatMessage } = useIntl()
     const [searchQuery, setSearchQuery] = useState<string>('')
 
     const handleSearchChange = ({ target: { value }}: any) => {
@@ -46,7 +48,7 @@ const Searchbar = (props: SearchbarProps) => {
             <TextField
                 id="searchbar"
                 className="search-field"
-                label="Type your request..."
+                label={`${formatMessage({ id: 'searchbar.typeYourRequest'})}...`}
                 value={searchQuery}
                 onChange={handleSearchChange}
                 // variant="standard"

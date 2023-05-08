@@ -9,7 +9,7 @@ const App = () => {
     const lightTheme = createTheme({
         palette: {
             mode: 'light',
-        }
+        },
     })
 
     return (

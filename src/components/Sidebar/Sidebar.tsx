@@ -3,12 +3,15 @@ import { useNavigate } from 'react-router-dom'
 import { sidebarMenu } from '../../constants'
 import { MenuList, MenuItem, ListItemIcon, ListItemText, Typography, Divider } from '@mui/material'
 import { SiReactivex } from 'react-icons/si'
+import { useIntl } from 'react-intl'
 
-import './sidebar.scss'
+import './style.scss'
 
 
 const Sidebar = () => {
     const navigate = useNavigate()
+    const { formatMessage } = useIntl()
+    const currentYear = new Date().getFullYear()
 
     const handleMenuClick = (route: string): void => {
         navigate(route)
@@ -18,14 +21,14 @@ const Sidebar = () => {
         return (
             <MenuList className="sb-menu">
                 {sidebarMenu.map((item, index) => {
-                    const { icon: MenuIcon } = item
+                    const { name, destination, icon: MenuIcon } = item
 
                     return (
-                        <MenuItem key={index} onClick={() => handleMenuClick(item.destination)}>
+                        <MenuItem key={index} onClick={() => handleMenuClick(destination)}>
                             <ListItemIcon>
                                 <MenuIcon className="sb-icon" fontSize="small" color="inherit" />
                             </ListItemIcon>
-                            <ListItemText>{item.name}</ListItemText>
+                            <ListItemText>{formatMessage({ id: name })}</ListItemText>
                         </MenuItem>
                     )
                 })}
@@ -44,12 +47,14 @@ const Sidebar = () => {
                         <Typography variant="h1">React Sandbox</Typography>
                     </span>
                 </div>
-                <Divider />
+                <Divider light />
                 <div className="sb-middle">
                     {renderMenubar()}
                 </div>
                 <div className="sb-bottom">
-                    <Typography>Copyright: 2023</Typography>
+                    <Typography>
+                        {`${formatMessage({ id: 'sidebar.copyright' })}: ${currentYear}`}
+                    </Typography>
                 </div>
             </div>
         </div>

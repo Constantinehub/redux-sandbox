@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { useIntl } from 'react-intl'
 import { getNewsData } from '../../redux/actions/actionCreator'
 import Searchbar from '../../components/Searchbar/Searchbar'
 import Card from '../../components/Card/Card'
@@ -7,6 +8,7 @@ import Card from '../../components/Card/Card'
 import './style.scss'
 
 const Blog = () => {
+    const { formatMessage } = useIntl()
     const [query, setQuery] = useState<string>('')
     const [articles, setArticles] = useState([])
     const dispatch = useDispatch()
@@ -32,7 +34,7 @@ const Blog = () => {
     return (
         <div className="blog">
             <div className="blog-searchbar">
-                <Card wrapper title={'Search'}>
+                <Card wrapper title={formatMessage({ id: 'common.search' })}>
                     <Searchbar
                         onChange={onSearchChange}
                         onSubmit={onSearchSubmit}

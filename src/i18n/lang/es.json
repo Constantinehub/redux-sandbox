@@ -1,0 +1,18 @@
+{
+  "common.menu": "",
+  "common.language": "",
+  "common.search": "",
+
+  "statusbar.menu.profile": "",
+  "statusbar.menu.test2": "",
+
+  "searchbar.typeYourRequest": "",
+
+  "sidebar.menu.blog": "first",
+  "sidebar.menu.hotspotEditor": "second",
+  "sidebar.copyright": "",
+
+  "notFound.title": "",
+  "notFound.text": "",
+  "notFound.getBackToHome": ""
+}

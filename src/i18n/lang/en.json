@@ -1,0 +1,18 @@
+{
+  "common.menu": "Menu",
+  "common.language": "Language",
+  "common.search": "Search",
+
+  "statusbar.menu.profile": "Profile",
+  "statusbar.menu.test2": "Menu item test 2",
+
+  "searchbar.typeYourRequest": "Type your request",
+
+  "sidebar.menu.blog": "Blog",
+  "sidebar.menu.hotspotEditor": "Hotspot Editor",
+  "sidebar.copyright": "Copyright",
+
+  "notFound.title": "Whooops... looks like you're lost",
+  "notFound.text": "The page you are looking for not available!",
+  "notFound.getBackToHome": "Get back to home"
+}
