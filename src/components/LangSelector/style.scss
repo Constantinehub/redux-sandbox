@@ -1,0 +1,13 @@
+@import 'src/styles/variables';
+
+.lang-selector {
+  width: 100%;
+
+  .MuiInput-root {
+    width: 100%;
+  }
+}
+
+.MuiMenu-root {
+  min-width: 200px;
+}
